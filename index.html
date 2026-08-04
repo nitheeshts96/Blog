@@ -1,255 +1,492 @@
-<html>
-<title>mypage</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
-<title>ts_nitheesh</title>
-<style>
-  #hey{ 
-            animation: fadeInAnimation ease 3s; 
-            animation-iteration-count: 1; 
-            animation-fill-mode: backwards ; 
-        } 
-        @keyframes fadeInAnimation { 
-            0% { 
-                opacity: 0; 
-            } 
-            100% { 
-                opacity: 1; 
-            } 
-        } 
-	 /* 1. Set the initial text color */
-	 .hover-text {
-            color: black;
-            /* Optional: Makes the color switch smoothly */
-        }
-	  /* 2. Change the color when the mouse hovers over it */
-        .hover-text:hover {
-            color: red;
-        }
-body{
-  margin: 0;
-}        
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow: hidden;
-  background-color: white;
-  width: 100%;
-  top:0;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-ul.topnav li {float: left;}
+  <title>ts_nitheesh | Portfolio</title>
 
-ul.topnav li a {
-  display: block;
-  color: black;
-  font-family: fira mono;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-ul.topnav li a:hover{
-	color:black;
-}	
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-* {
-  box-sizing: border-box;
-}
-.header{
-	background-color: white;
-	padding-left:1px;
-	text-align: left;
-	box-shadow: 5px;
-    width:100%;
-	background-image: url('.github/background_image.png'); 
-}
-@media screen and (max-width: 600px) {
-  .header {
-    width: 100%;
-  }
-}
-h1{
-	color:black;
-	font-family: San Francisco;
-	text-shadow: rgb();
-}
-@media screen and (max-width: 600px) {
-  .h1 {
-    font-size: medium;
-  }
-}
-#hey{
-  color: black;
-  font-family: San Francisco;
-  font-size:100px;
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-}
-#hey:hover{
-  color: black;
-}
-@media screen and (max-width: 600px) {
-  #hey {
-    text-align: left;
-    font-size: 60px;
-  }
-}
-#projects{
-    width: 100%;
-    height: auto;
-    padding: 340px;
-    text-align: center;
-}
-#project{
-    width: 100%;
-    height: auto;
-    margin-left: 120px;
-}
-@media screen and (max-width: 600px) {
-  #project {
-    margin-left: 9px;
-  }
-}
-@media screen and (max-width: 600px) {
-  #projects {
-    width: 100%;
-    padding: 9px;
-    height: auto;
-  }
-}
-.pro1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
-    color: white;
-}
-#hand{
-    color: white;
-    text-decoration: none;
-    font-family: 'ubuntu';
-    padding: 7px;
-    letter-spacing: 2px;
-}
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-.fa:hover {
-    opacity: 0.7;
-}
+  <style>
 
-.fa-facebook {
-  background: none;
-  color: white;
-}
-.fa-github {
-  background: none;
-  color: white;
-}
-.fa-instagram {
-  background:none;
-  color: white;
-}
-.fa-linkedin {
-  background: none;
-  color: white;
-}
-#footer{
-  width: 100%;
-  height: auto;
-  background-color: black;
-  padding: 40px;
-  text-align: center;
-  float: left;
-}
-h4{
-  color:white;
-}
-jj1{
-  width: 100%;
-  height: auto;
-  background-color: black;
-}
-jj{
-  color: black;
-  font-family: 'San Francisco', Times, serif;
-  text-align: center;	
-  letter-spacing: 2px;
-}
-</style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+    }
+
+    /* =========================
+       HERO / HEADER
+    ========================= */
+
+    .header {
+      width: 100%;
+      min-height: 100vh;
+
+      background-image: url("background.png");
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      padding: 60px 8%;
+
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      animation: fadeInAnimation 2s ease;
+    }
+
+    #hey {
+      color: black;
+      font-family: Arial, sans-serif;
+      font-size: 80px;
+      line-height: 1.05;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #333;
+      font-family: monospace;
+      font-size: 28px;
+      margin-top: 20px;
+      letter-spacing: 2px;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .topnav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-end;
+
+      padding: 20px 6%;
+      z-index: 10;
+    }
+
+    .topnav a {
+      color: black;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 16px;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    .topnav a:hover {
+      color: #4285f4;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    .section {
+      width: 100%;
+      min-height: 500px;
+
+      background-color: #050505;
+
+      padding: 100px 10%;
+
+      color: white;
+    }
+
+    .section-title {
+      font-family: monospace;
+      font-size: 45px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .content-list {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0;
+
+      font-family: Arial, sans-serif;
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    .content-list li {
+      margin-bottom: 20px;
+    }
+
+    .content-list a {
+      color: #8ab4f8;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-text {
+      max-width: 900px;
+      margin: auto;
+
+      font-size: 19px;
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    #footer {
+      width: 100%;
+      background-color: black;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    #footer h4 {
+      color: white;
+      font-family: Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .fa {
+      padding: 12px;
+      font-size: 22px;
+      width: 45px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px;
+      border-radius: 50%;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+      transform: translateY(-3px);
+    }
+
+    .fa-facebook {
+      background: #1877f2;
+    }
+
+    .fa-github {
+      background: #333;
+    }
+
+    .fa-instagram {
+      background: #e1306c;
+    }
+
+    .fa-linkedin {
+      background: #0077b5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media screen and (max-width: 600px) {
+
+      .header {
+        min-height: 100vh;
+        padding: 40px 25px;
+
+        background-position: 65% center;
+      }
+
+      .topnav {
+        justify-content: center;
+        padding: 20px 10px;
+      }
+
+      .topnav a {
+        font-size: 13px;
+        margin-left: 10px;
+      }
+
+      #hey {
+        font-size: 48px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+      }
+
+      .section {
+        padding: 70px 25px;
+      }
+
+      .section-title {
+        font-size: 35px;
+      }
+
+      .content-list {
+        font-size: 16px;
+      }
+
+      .about-text {
+        font-size: 16px;
+      }
+    }
+
+  </style>
+
 </head>
+
 <body>
-<!-- <ul class="topnav">
-  <li><a href="file:///home/neethu/websites/ts_nitheesh/ts.html">home</a></li>
-  <li><a href="#proje">projects</a></li>
-  <li><a href="#course">courses</a></li>
-  <li><a href="#achivements">achivements</a></li>
-  <li><a href="#foces">foces</a></li>
-  <li><a href="#about">about</a></li>
-</ul> -->
-<div class="header"><h3 id="hey" class="hover-text">Hi I 'm Nitheesh T S<h3 class="jj">Developer,Artist</h3></h3></div>
-<div id="projects" style="background-color: black;">
-    <h1 class="pro1" id="proje">Projects</h1>
-    <div id="project" style="background-color: black;">
-    <ul id="hand">
-        <li style="text-align: left;">Radio Frequency Identification system(Mini project)</li><br>
-        <li style="text-align: left;">Handwritten Character Recognition using Neural network</li><br>
-		<li style="text-align: left;">Petkart Mobile Application</li>
-	</ul>
+
+  <!-- HERO SECTION -->
+
+  <header class="header">
+
+```
+<nav class="topnav">
+  <a href="#projects">Projects</a>
+  <a href="#courses">Courses</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#foces">FOCES</a>
+  <a href="#about">About</a>
+</nav>
+
+<div class="hero-content">
+
+  <h1 id="hey">
+    Hi, I'm Nitheesh T S
+  </h1>
+
+  <div class="subtitle">
+    Developer · Artist
+  </div>
+
 </div>
-</div>
-<div id="projects" style="background-color: black;">
-    <h1 class="pro1" id="course">Courses</h1>
-    <ul id="hand">
-        <div id="project" style="background-color: black;">
-        <li style="text-align: left;">Google Associate Cloud Engineer from coursera</li><br>
-        <li style="text-align: left;">Android Development course from Udemy</li><br>
-        <li style="text-align: left;">Web Design course from Kerala Computer Saksharatha Mission</li><br>
-    </ul>
-</div>
-</div>
-<div id="projects" style="background-color: black;">
-    <h1 class="pro1" id="achivements">Achivements</h1>
-    <ul id="hand">
-        <div id="project" style="background-color: black; margin-left: 1px;">
-        <li style="text-align: left;">For the active Volunteering in the two day event I install 3.0 and django conducted by Foces.</li><br>
-        <li style="text-align: left;">For the meritorious and outstanding service as the Developer Lead of the
-          Forum of Computer Engineering Students and FOSS Cell
-          in the academic year 2019-2020.</i><br>
-          <br> <li style="text-align: left;">From Coursera : Google Cloud Platform Fundamentals: Core Infrastructure ,Essential Google Cloud Infrastructure: Foundation , Essential Google Cloud Infrastructure: Core Services ,
-          Elastic Google Cloud Infrastructure: Scaling and Automation , Reliable Google Cloud Infrastructure: Design and Process.View certificate click <a href="https://www.coursera.org/account/accomplishments/records/4NPMKB9WLTLD?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">here</a></li>
-       </ul>
- </div>
-</div>
-<div id="projects" style="background-color: black">
-    <h1 class="pro1" id="foces">FOCES</h1>
-    <ul id="hand">
-        <li style="text-align: left; list-style-type: none;">Leading as the Developer role in the Forum of computer engineering students and FOSS cell 2019-2020.Find link on <a href="https://f0ces.github.io/index.html">foces</a></li>
-    </ul>
-</div>
-<div id="projects" style="background-color: black">
-  <h1 class="pro1" id="about">About</h1>
-  <ul id="hand">
-      <li style="text-align: left; list-style-type: none;  margin-left: 1px;">Hi, I am Nitheesh T S, Btech graduate from College of Engineering Chengannur. My special skills in Programming languages like
-        C,C++,Java,Python, Flutter, React Native, React JS. I am also familiar with SQL database. Knowledge in scripting languages like Javascript and PHP. Interested in Web development, App development.
-        I have  a little knowledge in Google Cloud Platform.</li>
-  </ul>
-</div>
-<div id="footer">
-  <h4 style="font-family: 'San Francisco', Times,; letter-spacing: 1px;">Thanks for visiting my Page</h4>
-    <h4 style="font-family: 'San Francisco', Times,;">Contact me on gmail nitheeshts956@gmail.com or <a href="https://www.facebook.com/nitheeshts.lakkoor" class="fa fa-facebook"></a>
-    <a href="https://www.instagram.com/ts_nitheesh/" class="fa fa-instagram"></a><a href="https://github.com/1996nitheeshartweb" class="fa fa-github"></a>  
-   <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F%3Ftrk%3D404_page" class="fa fa-linkedin"></a></h4>
-    </h4>
-    </div>
-    </body>
-    </html>
+```
+
+  </header>
+
+  <!-- PROJECTS -->
+
+  <section class="section" id="projects">
+
+```
+<h2 class="section-title">
+  Projects
+</h2>
+
+<ul class="content-list">
+
+  <li>
+    Radio Frequency Identification System (Mini Project)
+  </li>
+
+  <li>
+    Handwritten Character Recognition using Neural Network
+  </li>
+
+  <li>
+    Petkart Mobile Application
+  </li>
+
+</ul>
+```
+
+  </section>
+
+  <!-- COURSES -->
+
+  <section class="section" id="courses">
+
+```
+<h2 class="section-title">
+  Courses
+</h2>
+
+<ul class="content-list">
+
+  <li>
+    Google Associate Cloud Engineer from Coursera
+  </li>
+
+  <li>
+    Android Development Course from Udemy
+  </li>
+
+  <li>
+    Web Design Course from Kerala Computer Saksharatha Mission
+  </li>
+
+</ul>
+```
+
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section class="section" id="achievements">
+
+```
+<h2 class="section-title">
+  Achievements
+</h2>
+
+<ul class="content-list">
+
+  <li>
+    Active volunteering in the two-day event
+    Install 3.0 and Django conducted by FOCES.
+  </li>
+
+  <li>
+    Meritorious and outstanding service as Developer Lead
+    of the Forum of Computer Engineering Students and FOSS Cell
+    during the academic year 2019-2020.
+  </li>
+
+  <li>
+    Coursera certifications:
+    Google Cloud Platform Fundamentals: Core Infrastructure,
+    Essential Google Cloud Infrastructure: Foundation,
+    Essential Google Cloud Infrastructure: Core Services,
+    Elastic Google Cloud Infrastructure: Scaling and Automation,
+    and Reliable Google Cloud Infrastructure: Design and Process.
+
+    <br><br>
+
+    <a href="https://www.coursera.org/account/accomplishments/records/4NPMKB9WLTLD"
+       target="_blank">
+      View Certificate
+    </a>
+  </li>
+
+</ul>
+```
+
+  </section>
+
+  <!-- FOCES -->
+
+  <section class="section" id="foces">
+
+```
+<h2 class="section-title">
+  FOCES
+</h2>
+
+<ul class="content-list">
+
+  <li>
+    Leading as Developer in the Forum of Computer Engineering
+    Students and FOSS Cell 2019-2020.
+
+    <br><br>
+
+    Find link on
+    <a href="https://f0ces.github.io/index.html"
+       target="_blank">
+      FOCES
+    </a>
+  </li>
+
+</ul>
+```
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+```
+<h2 class="section-title">
+  About
+</h2>
+
+<p class="about-text">
+
+  Hi, I am Nitheesh T S, BTech graduate from
+  College of Engineering Chengannur.
+
+  My special skills include programming languages like
+  C, C++, Java, Python, Flutter, React Native and React JS.
+
+  I am also familiar with SQL databases and scripting languages
+  like JavaScript and PHP.
+
+  I am interested in Web Development and App Development.
+  I also have basic knowledge of Google Cloud Platform.
+
+</p>
+```
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="footer">
+
+```
+<h4>
+  Thanks for visiting my Page
+</h4>
+
+<h4>
+  Contact me on Gmail:
+  nitheeshts956@gmail.com
+</h4>
+
+<a href="https://www.facebook.com/nitheeshts.lakkoor"
+   target="_blank"
+   class="fa fa-facebook">
+</a>
+
+<a href="https://www.instagram.com/ts_nitheesh/"
+   target="_blank"
+   class="fa fa-instagram">
+</a>
+
+<a href="https://github.com/1996nitheeshartweb"
+   target="_blank"
+   class="fa fa-github">
+</a>
+
+<a href="https://www.linkedin.com/"
+   target="_blank"
+   class="fa fa-linkedin">
+</a>
+```
+
+  </footer>
+
+</body>
+</html>
