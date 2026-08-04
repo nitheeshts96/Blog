@@ -18,6 +18,17 @@
                 opacity: 1; 
             } 
         } 
+	 /* 1. Set the initial text color */
+	 .hover-text {
+            color: black;
+            font-size: 24px;
+            /* Optional: Makes the color switch smoothly */
+            transition: color 0.3s ease; 
+        }
+	  /* 2. Change the color when the mouse hovers over it */
+        .hover-text:hover {
+            color: red;
+        }
 body{
   margin: 0;
 }        
@@ -186,7 +197,7 @@ jj{
   <li><a href="#foces">foces</a></li>
   <li><a href="#about">about</a></li>
 </ul>
-<div class="header"><h3 id="hey">Hi I 'm Nitheesh T S<h3 class="jj">Developer,Artist</h3></h3></div>
+<div class="header"><h3 id="hey" class="hover-text">Hi I 'm Nitheesh T S<h3 class="jj">Developer,Artist</h3></h3></div>
 <div id="projects" style="background-color: black;">
     <h1 class="pro1" id="proje">Projects</h1>
     <div id="project" style="background-color: black;">
